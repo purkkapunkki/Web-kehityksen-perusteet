@@ -1,0 +1,115 @@
+:root {
+  --red: #ff0000ff;
+  --light-red: rgb(255, 152, 152);
+  --green: rgb(0, 251, 0);
+  --dark-gray: #2f2f3d;
+  --white: #f0ecec;
+  --gray: #565663;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#info-box {
+  background-color: var(--light-red);
+  overflow: auto;
+  padding: 30px;
+}
+
+#info-text {
+  float: right;
+}
+
+#restaurant-image {
+  display: block;
+  margin: auto;
+  width: 40%;
+  height: 40%;
+  float: left;
+}
+
+#sushi-image {
+  position: absolute;
+  width: 150px;
+  left: 825px;
+  top: 166px;
+}
+
+.center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.rounded-corners {
+  border-radius: 12px;
+}
+
+body {
+  background: var(--white);
+}
+
+nav {
+  box-shadow: 0 8px 8px -4px var(--gray);
+  overflow: auto;
+  padding: 30px 60px;
+}
+
+nav,
+footer {
+  background-color: var(--dark-gray);
+}
+
+nav > h1 {
+  float: left;
+}
+
+nav > ul {
+  float: right;
+}
+
+article:first-child {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+footer {
+  color: var(--white);
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  overflow: auto;
+}
+
+nav ul li {
+  float: left;
+  margin: 0.5rem;
+}
+
+h1 {
+  color: var(--red);
+}
+
+a {
+  color: var(--white);
+}
+
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--white);
+}
+
+a:hover {
+  color: var(--red);
+}
+
+a:active {
+  color: var(--green);
+}
