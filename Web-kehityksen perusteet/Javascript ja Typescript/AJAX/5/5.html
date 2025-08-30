@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="5.css" />
+    <script src="fetchData.js"></script>
+    <script src="5.js" defer></script>
+  </head>
+
+  <body>
+    <article id="restaurant-fetching-error" class="hidden error"></article>
+    <h1>Restaurants</h1>
+    <table id="restaurant-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <!-- add restaurants here -->
+    </table>
+    <!-- modal -->
+    <dialog id="modal">
+      <header>
+        <button class="close-button">Close</button>
+      </header>
+      <!-- add restaurant info here when restaurant is clicked -->
+      <article id="modal-content"></article>
+      <article id="daily-menu-fetching-error" class="hidden error"></article>
+    </dialog>
+    <dialog id="user-modal">
+      <header>
+        <button class="close-button">Close</button>
+      </header>
+      <p>kirjautuminen/rekisteröityminen</p>
+    </dialog>
+  </body>
+</html>
