@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <title>viikko2</title>
+  </head>
+  <body>
+    <nav class="center">
+      <h1>Taiyaki Shop</h1>
+      <ul>
+        <li><a href="#">Etusivu</a></li>
+        <li><a href="#">Ruokalistat</a></li>
+        <li><a href="#">Yhteystiedot</a></li>
+      </ul>
+      <button id="show-dialog">näytä nappi</button>
+    </nav>
+
+    <!-- <dialog closedby="any" ></dialog> -->
+    <dialog class="rounded-corners" id="signin-dialog">
+      <div id="inner-border" class="rounded-corners">
+        <h1>Rekisteröidy tiedoillasi</h1>
+        <img
+          src="img/taiyaki-logo2 - Copy.png"
+          alt="Kuva taiyaki logosta"
+          id="taiyaki-logo"
+        />
+
+        <form id="signin-form" action="">
+          <label for="sukunimi">Sukunimi, minimi 3 kirjainta:</label>
+          <input
+            type="text"
+            id="sukunimi"
+            name="sukunimi"
+            autofocus
+            placeholder="Sukunimi"
+            minlength="3"
+            maxlength="30"
+            required
+          />
+
+          <label for="email">Email osoite (@metropolia.fi):</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            pattern=".+@metropolia\.fi"
+            required
+          />
+
+          <label for="salasana">Salasana, vähintään 8 merkkiä:</label>
+          <input
+            type="password"
+            id="salasana"
+            name="salasana"
+            placeholder="Salasana"
+            maxlength="15"
+            pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
+            required
+          />
+
+          <div id="form-buttons">
+            <input
+              type="submit"
+              value="Lähetä"
+              id="send-button"
+              class="rounded-corners"
+            />
+            <button class="rounded-corners">Sulje</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <main>
+      <article class="center">
+        <p>Tänne lisää sisältöä seuraavina viikkoina.</p>
+      </article>
+
+      <div id="info-box" class="center rounded-corners">
+        <img
+          id="restaurant-image"
+          src="img/restaurant.jpg"
+          alt="Kuva ravintolasta"
+          class="rounded-corners"
+        />
+        <article id="info-text" class="center">
+          <div>
+            <h2>Lisää meistä</h2>
+            <h3>Tämä on meidän tarinamme</h3>
+            <br />
+            <p>
+              Olemme suomalainen yritys, jonka tavoitteena on tuoda suomalaisten
+              kuluttajien ulottuville Japanista kotoisin oleva herkku nimeltään
+              Taiyaki.
+              <br />
+              Taiyaki on makea leivonnainen, joka on yleensä muodoltaan
+              meriahvenen muotoinen. Vohvelimaisen taikinan täytteenä voi olla
+              esimerkiksi punapaputahnaa tai suklaata, kokeile rohkeasti
+              täytevalikoimaame ja löydä oma suosikkisi!
+            </p>
+          </div>
+        </article>
+      </div>
+      <img
+        id="taiyaki-image"
+        src="img/transparent-taiyaki.png"
+        alt="Kuva kolmesta taiyakista"
+      />
+    </main>
+
+    <footer>
+      <p>&copy;Minä &trade;</p>
+    </footer>
+
+    <script src="js/dialog2.js" defer></script>
+  </body>
+</html>
