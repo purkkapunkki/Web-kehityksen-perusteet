@@ -1,0 +1,202 @@
+:root {
+  --pink: rgb(252, 174, 185);
+  --light-gray: #bebfc5;
+  --black: #1b1b1b;
+  --light-brown: #e8a868;
+
+  --green: rgb(0, 251, 0);
+  --red: rgb(251, 0, 0);
+
+  --dark-gray: #2f2f3d;
+  --white: #f0ecec;
+  --pure-white: #ffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 520;
+}
+
+*:focus {
+  outline: solid var(--pure-white);
+}
+
+#info-box {
+  /* TODO muuta fonttii sopivammaks kuvaan plus kuvaan opacityy alemmaks*/
+  background-image: url("../img/taiyaki3.jpg");
+  background-size: 50%;
+  overflow: auto;
+  padding: 30px;
+}
+
+#info-text {
+  float: right;
+}
+
+/* TODO vaiha restaurankikuva */
+#restaurant-image {
+  display: block;
+  margin: auto;
+  width: 40%;
+  height: 40%;
+  float: left;
+}
+
+#taiyaki-image {
+  position: absolute;
+  width: 178px;
+  left: 806px;
+  top: 608px;
+}
+
+#hero-image {
+  background-color: var(--light-gray);
+  background-image: url("../img/r08.jpg");
+  height: 70vh;
+  width: 100%;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+#hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+}
+
+#taiyaki-logo {
+  display: block;
+  margin: 5% auto 2.5%;
+  width: 50%;
+  height: 50%;
+}
+
+#inner-border {
+  border-style: solid;
+  border-color: var(--white);
+  padding: 1rem;
+}
+
+#signin-dialog {
+  background: linear-gradient(to bottom, var(--pink), var(--white));
+  margin: auto;
+  border: none;
+  padding: 30px;
+  max-width: 27%;
+}
+
+#signin-dialog h1 {
+  font-size: 1.4rem;
+}
+
+#signin-dialog button:hover {
+  background: linear-gradient(to bottom right, var(--pink), var(--pure-white));
+}
+
+#signin-dialog::backdrop {
+  backdrop-filter: blur(3px);
+}
+
+.center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.rounded-corners {
+  border-radius: 12px;
+}
+
+body {
+  background: var(--white);
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+body:has(dialog[open]) {
+  overflow-y: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+nav {
+  /* TODO pist navi toimii flexboxina ja muuta se curtaineiks mis joka verhos oma linkki
+  plus korjaa box shadow*/
+  box-shadow: 0 8px 8px -4px var(--gray);
+  overflow: auto;
+  padding: 30px 60px;
+  position: sticky;
+  top: 0;
+  display: flex;
+}
+
+nav,
+footer {
+  background-color: var(--dark-gray);
+}
+
+nav > h1 {
+  float: left;
+}
+
+nav > ul {
+  float: right;
+}
+
+article:first-child {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+footer {
+  color: var(--white);
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  overflow: auto;
+}
+
+nav h1 {
+  color: var(--white);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin: 0.5rem;
+}
+
+button {
+  float: right;
+}
+
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--white);
+}
+
+a:hover {
+  color: var(--pink);
+}
+
+a:active {
+  color: var(--green);
+}
