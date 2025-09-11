@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style4.css" />
+    <link rel="stylesheet" href="css/forms4.css" />
+    <link rel="stylesheet" href="css/media-queries4.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>viikko4</title>
+  </head>
+  <body>
+    <nav>
+      <h1 class="story-script-regular">Taiyaki Shop</h1>
+      <ul>
+        <li><a href="#">Etusivu</a></li>
+        <li><a href="#">Ruokalistat</a></li>
+        <li><a href="#">Yhteystiedot</a></li>
+      </ul>
+
+      <button id="show-dialog">
+        <span id="login-icon"
+          ><i class="fa-solid fa-right-to-bracket"></i
+        ></span>
+      </button>
+      <svg id="dark-theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"/></svg>
+    </nav>
+
+    <div id="hero-image">
+      <div id="hero-text">
+        <h1 class="story-script-regular">Tervetuloa!</h1>
+        <h3>Jotain tekstiä</h3>
+      </div>
+    </div>
+
+    <!-- <dialog closedby="any" ></dialog> -->
+    <dialog class="rounded-corners" id="signin-dialog">
+      <div id="inner-border" class="rounded-corners">
+        <h1 class="roboto-regular">Rekisteröidy tiedoillasi</h1>
+        <img
+          src="img/taiyaki-logo2 - Copy.png"
+          alt="Kuva taiyaki logosta"
+          id="taiyaki-logo"
+        />
+
+        <form id="signin-form" action="">
+          <label for="sukunimi">Sukunimi, minimi 3 kirjainta:</label>
+          <input
+            type="text"
+            id="sukunimi"
+            name="sukunimi"
+            autofocus
+            placeholder="Sukunimi"
+            minlength="3"
+            maxlength="30"
+            required
+          />
+
+          <label for="email">Email osoite (@metropolia.fi):</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            pattern=".+@metropolia\.fi"
+            required
+          />
+
+          <label for="salasana">Salasana, vähintään 8 merkkiä:</label>
+          <input
+            type="password"
+            id="salasana"
+            name="salasana"
+            placeholder="Salasana"
+            maxlength="15"
+            pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
+            required
+          />
+
+          <div id="form-buttons">
+            <input
+              type="submit"
+              value="Lähetä"
+              id="send-button"
+              class="pink-button rounded-corners"
+            />
+            <button class="pink-button rounded-corners">Sulje</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <main>
+      <section id="pillerinappiosio">
+        <h3">Lisäinfoa</h3>
+        <div id="pillerinapit">
+          <button class="pink-button rounded-corners">pillerinappi</button>
+          <button class="pink-button rounded-corners">pillerinappi</button>
+          <button class="pink-button rounded-corners">pillerinappi</button>
+        </div>
+      </section>
+
+      <article id="artikkeli" class="center">
+        <p>Tänne lisää sisältöä seuraavina viikkoina.</p>
+      </article>
+
+      <img
+        id="taiyaki-image"
+        src="img/transparent-taiyaki.png"
+        alt="Kuva kolmesta taiyakista"
+      />
+      <div id="info-box" class="center rounded-corners">
+        <img
+          id="restaurant-image"
+          src="img/restaurant.jpg"
+          alt="Kuva ravintolasta"
+          class="rounded-corners"
+        />
+        <article id="info-text" class="center">
+          <div>
+            <h2 class="roboto-regular">Lisää meistä</h2>
+            <h3 class="roboto-regular">Tämä on meidän tarinamme</h3>
+            <br />
+            <p>
+              Olemme suomalainen yritys, jonka tavoitteena on tuoda suomalaisten
+              kuluttajien ulottuville Japanista kotoisin oleva herkku nimeltään
+              Taiyaki.
+              <br />
+              Taiyaki on makea leivonnainen, joka on yleensä muodoltaan
+              meriahvenen muotoinen. Vohvelimaisen taikinan täytteenä voi olla
+              esimerkiksi punapaputahnaa tai suklaata, kokeile rohkeasti
+              täytevalikoimaame ja löydä oma suosikkisi!
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy;Minä &trade;</p>
+    </footer>
+
+    <script src="js/dialog3.js" defer></script>
+    <script src="js/effects.js" defer></script>
+  </body>
+</html>

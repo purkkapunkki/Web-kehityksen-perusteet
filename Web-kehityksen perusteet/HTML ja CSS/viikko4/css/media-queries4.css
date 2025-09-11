@@ -1,0 +1,36 @@
+@media only screen and (max-width: 600px) {
+  #taiyaki-image {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px;
+  }
+
+  nav h1 {
+    text-align: center;
+  }
+
+  #info-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #restaurant-image {
+    width: 75%;
+  }
+
+  .center {
+    margin: 1rem;
+    width: auto;
+  }
+}
