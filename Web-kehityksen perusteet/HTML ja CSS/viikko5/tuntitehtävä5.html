@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid touhua</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        background-image: linear-gradient(110deg, #ffced9, #95db92);
+        min-height: calc(100vh - 100px);
+        margin: 50px;
+        background-attachment: fixed;
+      }
+
+      .container {
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: [start] 1fr 1fr 1fr [end];
+        grid-template-rows: 100px 200px;
+        grid-auto-rows: 200px;
+        grid-auto-flow: dense;
+        gap: 3px;
+      }
+      .item {
+        border: 4px solid rgb(255, 90, 90);
+        border-radius: 3px;
+        font-size: 30px;
+        padding: 5px;
+        background-color: pink;
+        text-align: center;
+      }
+      .item2 {
+        background-color: lime;
+        grid-column: 1 / 3;
+      }
+      .item3 {
+        background-color: aqua;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      .item4 {
+        background-color: violet;
+        grid-column-start: 2;
+        grid-column-end: span 2;
+        grid-row-start: 2;
+        grid-row-end: span 2;
+        z-index: 10;
+      }
+      .item5 {
+        background-color: yellow;
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+      }
+      .item6 {
+        background-color: blue;
+        grid-column: 1 / 3;
+      }
+
+      .container2 {
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: min-content auto max-content auto 1fr;
+      }
+
+      .container3 {
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .container4 {
+        border: 1px solid red;
+        display: grid;
+        height: 50vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-auto-rows: 1fr;
+        grid-template-areas:
+          "header header header header"
+          "nav main main main"
+          "footer footer footer footer";
+      }
+
+      .itema {
+        background-color: blue;
+        grid-area: header;
+      }
+      .itemb {
+        background-color: blue;
+        grid-area: nav;
+      }
+      .itemc {
+        background-color: blue;
+        grid-area: main;
+      }
+      .itemd {
+        background-color: blue;
+        grid-area: footer;
+      }
+      @media screen and (max-width: 700px) {
+        .container4 {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr;
+          grid-auto-rows: 1fr;
+          grid-template-areas:
+            "header header"
+            "nav nav"
+            "main main"
+            "footer footer";
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">NAV</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item6">6</div>
+    </div>
+
+    <h2>special units</h2>
+
+    <div class="container2">
+      <div class="item">joo</div>
+      <div class="item">joo</div>
+      <div class="item">joo</div>
+      <div class="item">joo</div>
+    </div>
+
+    <h2>repeat functional keywords</h2>
+
+    <div class="container3">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+
+    <h2>grid area names</h2>
+
+    <div class="container4">
+      <div class="item itema">header</div>
+      <div class="item itemb">nav</div>
+      <div class="item itemc">main</div>
+      <div class="item itemd">footer</div>
+    </div>
+  </body>
+</html>

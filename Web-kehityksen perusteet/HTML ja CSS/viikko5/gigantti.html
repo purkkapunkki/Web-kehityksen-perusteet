@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid auto-cols demo</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+        box-sizing: border-box;
+      }
+
+      .grid-container {
+        border: 2px solid #333;
+        width: calc(100v - 40px);
+        overflow-x: auto;
+        padding: 5px;
+      }
+
+      .grid-no-auto {
+        display: grid;
+        grid-auto-flow: column;
+      }
+
+      .grid-with-auto {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 27%;
+      }
+
+      .item {
+        background: lightblue;
+        border: 1px solid #000;
+        text-align: center;
+        padding: 20px;
+        min-width: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Gigantti esimerkki</h2>
+
+    <h3>Ilman grid-auto-columns</h3>
+    <div class="grid-container">
+      <div class="grid-no-auto">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">5</div>
+        <div class="item">7</div>
+      </div>
+    </div>
+
+    <h3>grid-auto-columns: 27%</h3>
+    <div class="grid-container">
+      <div class="grid-with-auto">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+      </div>
+    </div>
+  </body>
+</html>

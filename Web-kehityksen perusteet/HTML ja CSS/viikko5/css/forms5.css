@@ -1,0 +1,43 @@
+#signin-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#signin-form input:focus {
+  background-color: var(--pink);
+}
+
+#signin-form input:not([type="submit"]) {
+  border-radius: 5px;
+  border: none;
+  border-left: solid 10px var(--pink);
+  padding: 0.5em;
+  transition: border-color 1s linear;
+}
+
+#signin-form input:not([type="submit"]):valid {
+  border-left: solid 10px var(--green);
+}
+
+#signin-form label {
+  margin-bottom: 0.2em;
+  margin-top: 0.8em;
+}
+
+#form-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+#form-buttons button {
+  margin-right: 0.5em;
+}
+
+#send-button {
+  margin-right: 0.5em;
+}
+
+#form-buttons input:hover {
+  cursor: pointer;
+}
